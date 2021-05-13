@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kavivanar&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@0;1&display=swap" rel="stylesheet">
+  <title>Pexels API - Robin Tranberg</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<!--
+  - Basic HTML index, if you hover over the Gallery text you will see another text that says "Return to start". 
+  - When you hover over pictures there is a text to let you know that if you click the picture you get the original size. 
+  - Getting a search icon from ionicons in one of the script tags.
+  - Having some links to my social media, thinking that if this was a real company the users could visit.
+-->
+<body> 
+  <section>
+    <div class="container">
+      <ul>
+        <span title="Visit our Instagram page!"><li><a href="https://www.facebook.com/traniz" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li></span>
+        <span title="Visit our Instagram page!"><li><a href="https://twitter.com/robintranberg" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li></span>
+        <span title="Visit our Instagram page!"><li><a href="https://www.instagram.com/robintranberg/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li></span>
+        <span title="Contact"><li><a href="contact.html"><i class="fas fa-id-card-alt" aria-hidden="true"></i></a></li></span>
+      </ul>
+      <div class="header">
+        <span title="Return to start"><h1 class="logo">G a l l e r y</h1></span>
+        <form>
+          <input type="text" placeholder="Search Photos">
+          <ion-icon name="search-outline"></ion-icon>
+        </form>
+      </div>
+      <br>
+      <hr>
+      <span title="Click on picture to see it bigger"><div class="gallery"></div></span>
+      <span title="Load more pictures"><a class="load-more data-img='curated'">View More</a></span>
+    </div>
+  </section>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+      <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2 id="head">Modal Header</h2>
+    </div>
+      <div class="modal-body">
+      <img id="imgs" class="loading" style="cursor: auto;margin-left: 34%;
+  margin-right: 34%;
+  width: 32%;" src=""/>
+    </div>
+      <div class="modal-footer">
+      <h4><a class="open" target="_blank" id="foot" href="">Modal Footer</a></h4>
+    </div>
+  </div>
+
+</div>
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>

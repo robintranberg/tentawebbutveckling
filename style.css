@@ -1,0 +1,370 @@
+/* Select all elementes and set the properties inside of the curly brackets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Kavivanar', cursive;
+  font-size: 100%;
+}
+
+body {
+  background-color: gray;
+}
+
+/* Properties for my social media contacts aswell contact icon. */
+ul {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  text-decoration: none;
+
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  position: relative;
+  width:60px;
+  height:60px;
+  display:block;
+  text-align:center;
+  margin:0 10px;
+  border-radius: 50%;
+  padding: 6px;
+  text-decoration:none;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: .5s;
+}
+
+
+ul li a:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-decoration:none;
+}
+
+ul li a .fab {
+  width: 100%;
+  height:100%;
+  display: inline-block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size:24px;
+  color: #262626;
+  transition: .5s;
+}
+
+ul li a .fas {
+  width: 100%;
+  height:100%;
+  display: inline-block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size:24px;
+  color: #262626;
+  transition: .5s;
+}
+
+/* Child is the different icons, number 1 is facebook, 2 twitter and so on. */
+ul li:nth-child(1) a:hover .fab {
+  color: #3b5998;
+}
+
+ul li:nth-child(2) a:hover .fab {
+  color: #00aced;
+}
+
+ul li:nth-child(3) a:hover .fab {
+  color: #e4405f;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+}
+/* Containing pretty much everything you see on the site */
+.container {
+  background-color: lightgrey;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 61px 7px #5e849c40;
+  padding: 50px 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Kavivanar', cursive;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header h1 {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+/* For the search section */
+form {
+  margin-top: 30px;
+  width: 80%;
+  max-width: 300px;
+  position: relative;
+}
+
+/* Input box properties, where the user can search for photos */
+input {
+  font-family: 'Kavivanar', cursive;
+  border: none;
+  border-bottom: 2px solid gray;
+  font-size: 20px;
+  width: 100%;
+  outline: none;
+  color: black;
+  background-color: transparent;
+  position: relative;
+}
+
+/* Placeholder properties, in this case "Search Photos" */
+input::placeholder {
+  opacity: 0.5;
+  color: black;
+  font-family: 'Kavivanar', cursive;
+}
+
+/* Ionicon properties which is the magnifying glass in the search box */
+form ion-icon {
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  opacity: 0.5;
+  color: black;
+}
+
+/* Properties of gallery logo */
+.logo
+{
+  color: black;
+  transition: 0.3s ease;
+  font-family: 'Kavivanar', cursive;
+}
+
+/* Gallery logo hovering effects */
+.logo:hover
+{
+  color: darkgray;
+  text-shadow: 2px 2px black;
+}
+
+/* Gallery section where I decide how the pictures layout should be */
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  margin-top: 50px;
+  grid-gap: 20px;
+}
+
+/* The box where pictures will be in*/
+.item {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: 0.3s ease box-shadow;
+  cursor: pointer;
+}
+/* Hovering effect when mouse is over pictures */
+.item:hover {
+  box-shadow: 0px 0px 20px 3px #00000042;
+}
+
+/* View more properties(?) */
+.load-more
+{
+    display: inline-block;
+    margin-top: 30px;
+    background-color: gray;
+    padding: 20px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 15px;
+}
+
+/* Button view more hovering effects*/
+.load-more:hover
+{
+  color: gray;
+  text-shadow: 2px 2px black;
+  transition: 0.3s ease;
+}
+
+.item:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+/* This is the part where you can see the photographer name easing in from bottom */
+.item h3 {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  background-color: #00000040;
+  color: white;
+  bottom: -70px;
+  font-weight: 300;
+  transition: 0.5s ease-in-out bottom;
+}
+
+.item:hover h3 {
+  bottom: 0;
+}
+
+@media only screen and (min-width: 900px) {
+    .container {
+      max-width: 1160px;
+      padding: 100px;
+    }
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .header h1 {
+      font-size: 50px;
+    }
+    .header input {
+      font-size: 24px;
+    }
+    .header ion-icon {
+      font-size: 24px;
+    }
+    .gallery {
+      grid-gap: 30px;
+    }
+}
+
+.popup{
+border: none;   
+}
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  margin-left: 7%;
+  margin-right: 7%;
+  position: fixed;
+  top: 5%;
+  background-color: lightgray;
+  width: 86%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-header {
+  padding: 2px 16px;
+  background-color: gray;
+  color: white;
+  border-radius: 20px 20px 0px 0px;
+  font-family: 'Kavivanar', cursive;
+}
+.modal-footer {
+  padding: 2px 16px;
+  background-color: gray;
+  border-radius: 0px 0px 20px 20px;
+  color: white;
+  font-family: 'Kavivanar', cursive;
+}
+.modal-body {padding: 2px 16px; height: 100%;}
+
+
+/* Animation section for when you click on a picture */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+.open::after {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASUlEQVQoU5WQwQ4AIAhC4/8/2rJmQ5NDHuUNBhjizMxYwvMAEABrGwSJHeS/FkxOwGGqY4UiIYEKaqO7BO8gy3Cpf1CNfous+SZoSE/7IpEx6wAAAABJRU5ErkJggg==');
+  margin: 0 3px 0 5px;
+}
+.open{
+ color:     white;
+    text-decoration: none;
+}
